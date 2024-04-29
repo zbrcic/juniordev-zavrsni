@@ -1,21 +1,23 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Radionica from './Radionica';
+import Predavaci from './Predavaci';
 
 function Header() {
   return (
     <Tabs
-      defaultActiveKey="profile"
+      defaultActiveKey="radionice"
       id="uncontrolled-tab-example"
       className="mb-3"
     >
-      <Tab eventKey="home" title="Radionice">
-        Tab content for Home
+      <Tab eventKey="radionice" title="Radionice">
+        {/* Ovde mi ide tab radionice */}
         <Radionica />
-
       </Tab>
-      <Tab eventKey="profile" title="Predavaci">
-        Tab content for Profile
+      <Tab eventKey="predavaci" title="Predavaci">
+        {/* Ovde mi ide tab radionice */}
+        <Predavaci />
+
       </Tab>
       <Tab eventKey="contact" title="Administracija" disabled>
         Tab content for Contact
