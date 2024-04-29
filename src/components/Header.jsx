@@ -1,5 +1,6 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import Radionica from './Radionica';
 
 function Header() {
   return (
@@ -10,6 +11,8 @@ function Header() {
     >
       <Tab eventKey="home" title="Radionice">
         Tab content for Home
+        <Radionica />
+
       </Tab>
       <Tab eventKey="profile" title="Predavaci">
         Tab content for Profile
