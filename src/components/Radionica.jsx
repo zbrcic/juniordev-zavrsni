@@ -8,7 +8,7 @@ function Radionica() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  
   useEffect(() => {
     axios.get('http://localhost:3001/radionice')
       .then((response) => {
@@ -31,7 +31,6 @@ function Radionica() {
             <p>Opis: {radionica.opis}</p>
             <p>Broj prijava: {radionica.broj_prijava}</p>
             <button onClick={handleShow}>Prijavi se</button>
-            <Prijava show={show} handleClose={handleClose} />
           </div>
         ))
       ) : (

@@ -3,38 +3,46 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-function Prijava({ show, handleClose }) {
+function Prijava({ show, handleClose, handleSave }) {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Prijavi se!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+        <Form>
+            <Form.Group className="mb-3" controlId="fullName">
+            <Form.Label>Puno ime</Form.Label>
+            <Form.Control
+                type="text"
+                placeholder="Unesite puno ime"
+                required
+            />
+            </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
+            <Form.Label>Email adresa</Form.Label>
+            <Form.Control
                 type="email"
                 placeholder="name@example.com"
                 autoFocus
-              />
+            />
             </Form.Group>
             <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
+            className="mb-3"
+            controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+            <Form.Label>Razlog prijave</Form.Label>
+            <Form.Control as="textarea" rows={3} placeholder="Opisite razlog prijave."/>
             </Form.Group>
-          </Form>
+        </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Zatvori
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="primary" onClick={handleSave}>
+            Spremi
           </Button>
         </Modal.Footer>
       </Modal>
