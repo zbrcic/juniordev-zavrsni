@@ -1,19 +1,39 @@
 import React, { useState, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
 import Prijava from './Prijava';
 import axios from 'axios';
 
 function Radionica() {
   const [data, setData] = useState(null);
   const [show, setShow] = useState(false);
+  const [odabranaRadionica, setOdabranaRadionica] = useState(null);
+  
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+ 
+  const handleShow = (radionica) => {
+    setOdabranaRadionica(radionica);
+    setShow(true);
+  };
   
+  const handleSave = (radionica) => {
+    axios.patch(`http://localhost:3001/radionice/${radionica.id}`, {
+      broj_prijava: radionica.broj_prijava + 1
+    })
+      .then(() => {
+        setData(data.map(item => item.id === radionica.id ? {...item, broj_prijava: item.broj_prijava + 1} : item));
+        handleClose();
+      })
+      .catch((error) => {
+        console.error('Error updating data: ', error);
+      });
+  };
+
+
   useEffect(() => {
     axios.get('http://localhost:3001/radionice')
       .then((response) => {
-        console.log('Server response:', response.data);
-        setData(response.data); // Set data to the entire array
+        setData(response.data);
       })
       .catch((error) => {
         console.error('Error fetching data: ', error);
@@ -24,13 +44,14 @@ function Radionica() {
     <>
       {data ? (
         data.map((radionica, index) => (
-          <div key={index}>
+          <div key={index} className="radionica-div">
             <h1>{radionica.ime}</h1>
             <p>Datum: {radionica.datum}</p>
             <p>Predavac: {radionica.predavac}</p>
             <p>Opis: {radionica.opis}</p>
             <p>Broj prijava: {radionica.broj_prijava}</p>
-            <button onClick={handleShow}>Prijavi se</button>
+            <Button variant="primary" onClick={() => handleShow(radionica)}>Prijavi se</Button>
+            <Prijava show={show} handleClose={handleClose} handleSave={() => handleSave(odabranaRadionica)} />
           </div>
         ))
       ) : (

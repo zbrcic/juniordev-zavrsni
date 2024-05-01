@@ -1,94 +1,95 @@
 {
-	"radionice": [
-		{
-			"id": "radionica_1",
-			"ime": "Radionica 1",
-			"datum": "01.01.2025",
-			"predavac": "predavac_1",
-			"opis": "Kratki opis radionice 1",
-			"broj_prijava": 0
-		},
-		{
-			"id": "radionica_2",
-			"ime": "Radionica 2",
-			"datum": "01.02.2025",
-			"predavac": "predavac_2",
-			"opis": "Kratki opis radionice 2",
-			"broj_prijava": 0
-		},		{
-			"id": "radionica_3",
-			"ime": "Radionica 3",
-			"datum": "01.03.2025",
-			"predavac": "predavac_3",
-			"opis": "Kratki opis radionice 3",
-			"broj_prijava": 0
-		}
-	],
-	"predavaci": [
-		{
-			"id": "predavac_1",
-			"ime": "Predavac 1",
-			"biografija": "Biografija predavaca 1",
-			"organizacija": "organizacija_1"
-		},
-		{
-			"id": "predavac_2",
-			"ime": "Predavac 2",
-			"biografija": "Biografija predavaca 2",
-			"organizacija": "organizacija_2"
-		},
-		{
-			"id": "predavac_3",
-			"ime": "Predavac 3",
-			"biografija": "Biografija predavaca 3",
-			"organizacija": "organizacija_1"
-		}
-	],
-	"organizacije": [
-		{
-			"id": "organizacija_1",
-			"ime": "Organizacija 1",
-			"opis": "Opis organizacije 1",
-			"radionice": [
-				"radionica_1",
-				"radionica_3"
-			]
-		},
-		{
-			"id": "organizacija_2",
-			"ime": "Organizacija 2",
-			"opis": "Opis organizacije 2",
-			"radionice": [
-				"radionica_2"
-			]
-		}
-	],
-	"tezine": [
-		{
-			"id": "junior",
-			"ime": "Junior"
-		},
-		{
-			"id": "mid",
-			"ime": "Mid"
-		},
-		{
-			"id": "senior",
-			"ime": "Senior"
-		}
-	],
-	"teme": [
-		{
-			"id": "react",
-			"ime": "React"
-		},
-		{
-			"id": "express",
-			"ime": "Express"
-		},
-		{
-			"id": "next_js",
-			"ime": "Next.js"
-		}
-	]
+  "radionice": [
+    {
+      "id": "radionica_1",
+      "ime": "Radionica 1",
+      "datum": "01.01.2025",
+      "predavac": "predavac_1",
+      "opis": "Kratki opis radionice 1",
+      "broj_prijava": 1
+    },
+    {
+      "id": "radionica_2",
+      "ime": "Radionica 2",
+      "datum": "01.02.2025",
+      "predavac": "predavac_2",
+      "opis": "Kratki opis radionice 2",
+      "broj_prijava": 1
+    },
+    {
+      "id": "radionica_3",
+      "ime": "Radionica 3",
+      "datum": "01.03.2025",
+      "predavac": "predavac_3",
+      "opis": "Kratki opis radionice 3",
+      "broj_prijava": 5
+    }
+  ],
+  "predavaci": [
+    {
+      "id": "predavac_1",
+      "ime": "Predavac 1",
+      "biografija": "Biografija predavaca 1",
+      "organizacija": "organizacija_1"
+    },
+    {
+      "id": "predavac_2",
+      "ime": "Predavac 2",
+      "biografija": "Biografija predavaca 2",
+      "organizacija": "organizacija_2"
+    },
+    {
+      "id": "predavac_3",
+      "ime": "Predavac 3",
+      "biografija": "Biografija predavaca 3",
+      "organizacija": "organizacija_1"
+    }
+  ],
+  "organizacije": [
+    {
+      "id": "organizacija_1",
+      "ime": "Organizacija 1",
+      "opis": "Opis organizacije 1",
+      "radionice": [
+        "radionica_1",
+        "radionica_3"
+      ]
+    },
+    {
+      "id": "organizacija_2",
+      "ime": "Organizacija 2",
+      "opis": "Opis organizacije 2",
+      "radionice": [
+        "radionica_2"
+      ]
+    }
+  ],
+  "tezine": [
+    {
+      "id": "junior",
+      "ime": "Junior"
+    },
+    {
+      "id": "mid",
+      "ime": "Mid"
+    },
+    {
+      "id": "senior",
+      "ime": "Senior"
+    }
+  ],
+  "teme": [
+    {
+      "id": "react",
+      "ime": "React"
+    },
+    {
+      "id": "express",
+      "ime": "Express"
+    },
+    {
+      "id": "next_js",
+      "ime": "Next.js"
+    }
+  ]
 }
