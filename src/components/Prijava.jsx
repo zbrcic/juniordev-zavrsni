@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-function Prijava({ show, handleClose, handleSave }) {
+function Prijava({ show, handleClose }) {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -41,7 +41,7 @@ function Prijava({ show, handleClose, handleSave }) {
           <Button variant="secondary" onClick={handleClose}>
             Zatvori
           </Button>
-          <Button variant="primary" onClick={handleSave}>
+          <Button variant="primary" onClick={handleClose}>
             Spremi
           </Button>
         </Modal.Footer>
