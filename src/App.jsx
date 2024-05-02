@@ -14,11 +14,12 @@ function App() {
   }
  
   return (
-    <div>
-      <Header/>
-      
+    <div>      
       <AdminContext.Provider value={{uloga, setUloga}}>
-        <Tipka/>
+        <Header/>
+        <div className="admin-toggle">
+          <Tipka/>
+        </div>
       </AdminContext.Provider>     
     </div>
   );

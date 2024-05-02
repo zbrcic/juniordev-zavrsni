@@ -2,8 +2,15 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Radionica from './Radionica';
 import Predavaci from './Predavaci';
+import { useContext } from 'react';
+import AdminContext from './Kontekst';
+import Tabovi from './Tabovi';
 
 function Header() {
+  const { uloga } = useContext(AdminContext);
+
+  console.log(uloga);
+
   return (
     <Tabs
       defaultActiveKey="radionice"
@@ -19,8 +26,9 @@ function Header() {
         <Predavaci />
 
       </Tab>
-      <Tab eventKey="contact" title="Administracija" disabled>
-        Tab content for Contact
+      <Tab eventKey="contact" title="Administracija" disabled={uloga !== 'admin'}>
+        <Tabovi />
+        
       </Tab>
     </Tabs>
   );

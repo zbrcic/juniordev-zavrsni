@@ -13,3 +13,10 @@
   padding: 1rem;
   margin-bottom: 1rem;
 }
+
+.admin-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+}
