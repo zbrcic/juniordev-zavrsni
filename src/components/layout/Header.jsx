@@ -1,10 +1,10 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Radionica from './Radionica';
-import Predavaci from './Predavaci';
+import Radionica from '../Radionica';
+import Predavaci from '../Predavaci';
 import { useContext } from 'react';
-import AdminContext from './Kontekst';
-import Tabovi from './Tabovi';
+import AdminContext from '../Kontekst';
+import Tabovi from '../layout/Tabovi';
 
 function Header() {
   const { uloga } = useContext(AdminContext);

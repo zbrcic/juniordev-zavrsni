@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
-import Header from "./components/Header";
+import Header from "./components/layout/Header";
 import AdminContext from "./components/Kontekst";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Tipka from "./components/Tipka";
+import Tipka from "./components/layout/Tipka";
 
 
 function App() {

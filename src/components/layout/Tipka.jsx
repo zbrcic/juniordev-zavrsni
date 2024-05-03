@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import Form from 'react-bootstrap/Form';
-import AdminContext from './Kontekst';
+import AdminContext from '../Kontekst';
 
 function Tipka() {
   const { uloga, setUloga } = useContext(AdminContext);

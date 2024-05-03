@@ -1,6 +1,8 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Tablica from './Tablica';
+import Tablica from '../tablice/TablicaRadionice';
+import TablicaPredavaci from '../tablice/TablicaPredavaci';
+import TablicaOrganizacije from '../tablice/TablicaOrganizacije';
 
 function Tabovi() {
   return (
@@ -13,10 +15,10 @@ function Tabovi() {
         <Tablica />
       </Tab>
       <Tab eventKey="predavaci" title="Predavaci">
-        Tab content for Predavaci
+        <TablicaPredavaci />
       </Tab>
       <Tab eventKey="organizacije" title="Organizacije" >
-        Tab content for Organizacije
+        <TablicaOrganizacije />
       </Tab>
     </Tabs>
   );
