@@ -3,6 +3,8 @@ import Tabs from 'react-bootstrap/Tabs';
 import Tablica from '../tablice/TablicaRadionice';
 import TablicaPredavaci from '../tablice/TablicaPredavaci';
 import TablicaOrganizacije from '../tablice/TablicaOrganizacije';
+import UnosRadi from '../unosi i promjene/Unosradi';
+import UrediRadionice from '../unosi i promjene/Urediradionice';
 
 function Tabovi() {
   return (
@@ -13,6 +15,8 @@ function Tabovi() {
     >
       <Tab eventKey="radionice" title="Radionice">
         <Tablica />
+        <UnosRadi />
+        <UrediRadionice />
       </Tab>
       <Tab eventKey="predavaci" title="Predavaci">
         <TablicaPredavaci />

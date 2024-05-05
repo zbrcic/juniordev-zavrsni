@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+// TablicaRadionice.jsx
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
+import UrediRadionice from '../unosi i promjene/Urediradionice';
 
-function Tablica() {
-  const [data, setData] = useState([]);
+function TablicaRadionice() {
+  const [radionice, setRadionice] = useState([]);
 
   useEffect(() => {
     axios.get('http://localhost:3001/radionice')
       .then(response => {
-        setData(response.data);
+        setRadionice(response.data);
       })
       .catch(error => {
         console.error('There was an error!', error);
@@ -19,19 +21,21 @@ function Tablica() {
     <Table striped bordered hover>
       <thead>
         <tr>
+          <th>Id</th>
           <th>Ime</th>
-          <th>Datum</th>
           <th>Predavac</th>
-          <th>Broj prijava</th>
+          <th>Opis</th>
+          <th>Uredi</th>
         </tr>
       </thead>
       <tbody>
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td>{item.ime}</td>
-            <td>{item.datum}</td>
-            <td>{item.predavac}</td>
-            <td>{item.broj_prijava}</td>
+        {radionice.map((radionica) => (
+          <tr key={radionica.id}>
+            <td>{radionica.id}</td>
+            <td>{radionica.ime}</td>
+            <td>{radionica.predavac}</td>
+            <td>{radionica.opis}</td>
+            <td><UrediRadionice radionica={radionica} /></td>
           </tr>
         ))}
       </tbody>
@@ -39,4 +43,4 @@ function Tablica() {
   );
 }
 
-export default Tablica;
+export default TablicaRadionice;

@@ -23,6 +23,22 @@
       "predavac": "predavac_3",
       "opis": "Kratki opis radionice 3",
       "broj_prijava": 5
+    },
+    {
+      "id": "4",
+      "ime": "jii",
+      "predavac": "jiii",
+      "opis": "jiii",
+      "datum": "01.01.2025",
+      "broj_prijava": 0
+    },
+    {
+      "id": "4",
+      "ime": "jii",
+      "predavac": "jiii",
+      "opis": "jiii",
+      "datum": "01.01.2025",
+      "broj_prijava": 0
     }
   ],
   "predavaci": [
