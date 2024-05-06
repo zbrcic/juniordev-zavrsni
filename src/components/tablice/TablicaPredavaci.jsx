@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Table from 'react-bootstrap/Table';
 
- 
-function TablicaPredavaci({ predavaci }) {  // Accept predavaci as a prop
-  console.log(predavaci); // Add this line
+function TablicaPredavaci() {
+  const [predavaci, setPredavaci] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3001/predavaci')
+      .then(response => {
+        setPredavaci(response.data);
+      })
+      .catch(error => {
+        console.error('There was an error!', error);
+      });
+  }, []);
 
   return (
     <Table striped bordered hover>
