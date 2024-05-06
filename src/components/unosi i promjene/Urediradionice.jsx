@@ -4,10 +4,11 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
-function UrediRadionice({ radionica }) {
+function UrediRadionice({ radionica, dohvatiRadionice }) {
   const [show, setShow] = useState(false);
   const [id, setId] = useState('');
   const [ime, setIme] = useState('');
+  const [datum, setDatum] = useState('');
   const [predavac, setPredavac] = useState('');
   const [opis, setOpis] = useState('');
 
@@ -15,6 +16,7 @@ function UrediRadionice({ radionica }) {
     if (radionica) {
       setId(radionica.id);
       setIme(radionica.ime);
+      setDatum(radionica.datum);
       setPredavac(radionica.predavac);
       setOpis(radionica.opis);
     }
@@ -28,12 +30,14 @@ function UrediRadionice({ radionica }) {
     axios.put(`http://localhost:3001/radionice/${id}`, {
       id,
       ime,
+      datum,
       predavac,
       opis,
     })
     .then(response => {
       console.log(response);
       handleClose();
+      dohvatiRadionice();
     })
     .catch(error => {
       console.error('There was an error!', error);
@@ -54,7 +58,7 @@ function UrediRadionice({ radionica }) {
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formId">
               <Form.Label>Id</Form.Label>
-              <Form.Control type="text" value={id} onChange={(e) => setId(e.target.value)} />
+              <Form.Control type="text" value={id} readOnly />
             </Form.Group>
 
             <Form.Group controlId="formIme">
@@ -65,6 +69,11 @@ function UrediRadionice({ radionica }) {
             <Form.Group controlId="formPredavac">
               <Form.Label>Predavac</Form.Label>
               <Form.Control type="text" value={predavac} onChange={(e) => setPredavac(e.target.value)} />
+            </Form.Group>
+
+            <Form.Group controlId="formDatum">
+              <Form.Label>Datum</Form.Label>
+              <Form.Control type="date" value={datum} onChange={(e) => setDatum(e.target.value)} />
             </Form.Group>
 
             <Form.Group controlId="formOpis">

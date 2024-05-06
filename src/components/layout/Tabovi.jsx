@@ -1,12 +1,25 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Tablica from '../tablice/TablicaRadionice';
+import React, { useState } from 'react';
+import axios from 'axios';
+import TablicaRadionice from '../tablice/TablicaRadionice';
 import TablicaPredavaci from '../tablice/TablicaPredavaci';
 import TablicaOrganizacije from '../tablice/TablicaOrganizacije';
 import UnosRadi from '../unosi i promjene/Unosradi';
-import UrediRadionice from '../unosi i promjene/Urediradionice';
 
 function Tabovi() {
+  const [radionice, setRadionice] = useState([]);
+
+  const dohvatiRadionice = () => {
+    axios.get('http://localhost:3001/radionice')
+      .then(response => {
+        setRadionice(response.data);
+      })
+      .catch(error => {
+        console.error('greska!', error);
+      });
+  };
+  
   return (
     <Tabs
       defaultActiveKey="profile"
@@ -14,9 +27,8 @@ function Tabovi() {
       className="mb-3"
     >
       <Tab eventKey="radionice" title="Radionice">
-        <Tablica />
-        <UnosRadi />
-        <UrediRadionice />
+        <TablicaRadionice radionice={radionice} dohvatiRadionice={dohvatiRadionice} />
+        <UnosRadi dohvatiRadionice={dohvatiRadionice} />
       </Tab>
       <Tab eventKey="predavaci" title="Predavaci">
         <TablicaPredavaci />

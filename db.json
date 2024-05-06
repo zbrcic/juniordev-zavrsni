@@ -25,20 +25,11 @@
       "broj_prijava": 5
     },
     {
-      "id": "4",
-      "ime": "jii",
-      "predavac": "jiii",
-      "opis": "jiii",
-      "datum": "01.01.2025",
-      "broj_prijava": 0
-    },
-    {
-      "id": "4",
-      "ime": "jii",
-      "predavac": "jiii",
-      "opis": "jiii",
-      "datum": "01.01.2025",
-      "broj_prijava": 0
+      "id": "radionica_4",
+      "ime": "Radionica 4",
+      "datum": "2024-01-07",
+      "predavac": "predavac_1",
+      "opis": "Kratki opis radionice 4"
     }
   ],
   "predavaci": [

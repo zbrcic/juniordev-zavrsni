@@ -5,7 +5,12 @@
   text-align: center;
 }
 
-
+.form-container {
+  border: 1px solid #000;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+}
 
 .radionica-div {
   border: 1px solid #000;

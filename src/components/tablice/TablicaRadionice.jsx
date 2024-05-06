@@ -1,21 +1,12 @@
-// TablicaRadionice.jsx
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import Table from 'react-bootstrap/Table';
 import UrediRadionice from '../unosi i promjene/Urediradionice';
+import BrisiRadionice from '../unosi i promjene/BrisiRadi';
 
-function TablicaRadionice() {
-  const [radionice, setRadionice] = useState([]);
+function TablicaRadionice({ radionice, dohvatiRadionice }) {
 
-  useEffect(() => {
-    axios.get('http://localhost:3001/radionice')
-      .then(response => {
-        setRadionice(response.data);
-      })
-      .catch(error => {
-        console.error('There was an error!', error);
-      });
-  }, []);
+
+  useEffect(dohvatiRadionice, []);
 
   return (
     <Table striped bordered hover>
@@ -35,7 +26,10 @@ function TablicaRadionice() {
             <td>{radionica.ime}</td>
             <td>{radionica.predavac}</td>
             <td>{radionica.opis}</td>
-            <td><UrediRadionice radionica={radionica} /></td>
+            <td>
+              <UrediRadionice radionica={radionica} dohvatiRadionice={dohvatiRadionice} />
+              <BrisiRadionice radionica={radionica} dohvatiRadionice={dohvatiRadionice} />
+            </td>
           </tr>
         ))}
       </tbody>
