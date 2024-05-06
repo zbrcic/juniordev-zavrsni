@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
@@ -18,7 +17,6 @@ function UnosPredav({ dodajPredavaca }) {
       biografija,
       organizacija,
     };
-    console.log(noviPredavac); // Log the new predavac object
 
     dodajPredavaca(noviPredavac);
   };
