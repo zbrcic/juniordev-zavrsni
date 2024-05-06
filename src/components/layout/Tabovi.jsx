@@ -6,9 +6,11 @@ import TablicaRadionice from '../tablice/TablicaRadionice';
 import TablicaPredavaci from '../tablice/TablicaPredavaci';
 import TablicaOrganizacije from '../tablice/TablicaOrganizacije';
 import UnosRadi from '../unosi i promjene/Unosradi';
+import UnosPredav from '../unosi i promjene/UnosPredav';
 
 function Tabovi() {
   const [radionice, setRadionice] = useState([]);
+  const [predavaci, setPredavaci] = useState([]);
 
   const dohvatiRadionice = () => {
     axios.get('http://localhost:3001/radionice')
@@ -20,6 +22,20 @@ function Tabovi() {
       });
   };
   
+  const dohvatiPredavace = () => {
+    axios.get('http://localhost:3001/predavaci')
+      .then(response => {
+        console.log(response.data); // Add this line
+
+        setPredavaci(response.data);
+      })
+      .catch(error => {
+        console.error('greska!', error);
+      });
+  };
+
+
+
   return (
     <Tabs
       defaultActiveKey="profile"
@@ -31,7 +47,8 @@ function Tabovi() {
         <UnosRadi dohvatiRadionice={dohvatiRadionice} />
       </Tab>
       <Tab eventKey="predavaci" title="Predavaci">
-        <TablicaPredavaci />
+        <TablicaPredavaci predavaci={predavaci} />
+        <UnosPredav dohvatiPredavace={dohvatiPredavace}/>
       </Tab>
       <Tab eventKey="organizacije" title="Organizacije" >
         <TablicaOrganizacije />
