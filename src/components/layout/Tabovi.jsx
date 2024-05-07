@@ -7,6 +7,7 @@ import TablicaPredavaci from '../tablice/TablicaPredavaci';
 import TablicaOrganizacije from '../tablice/TablicaOrganizacije';
 import UnosRadi from '../unosi i promjene/Unosradi';
 import UnosPredav from '../unosi i promjene/UnosPredav';
+import UnosOrg from '../unosi i promjene/UnosOrg';
 
 function Tabovi() {
   const [radionice, setRadionice] = useState([]);

@@ -7,21 +7,22 @@ function UnosOrg({ dohvatiOrganizacije }) {
   const [id, setId] = useState('');
   const [ime, setIme] = useState('');
   const [opis, setOpis] = useState('');
-  
+  const [radionice, setRadionice] = useState('');
+
 
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios.post('http://localhost:3001/predavaci', {
+    axios.post('http://localhost:3001/organizacije', {
       id,
       ime,
-      biografija,
-      organizacija,
+      opis,
+      radionice: radionice.split(',').map(item => item.trim()), 
     })
     .then(response => {
       console.log(response);
-      dohvatiPredavace();
+      dohvatiOrganizacije();
     })
     .catch(error => {
       console.error('There was an error!', error);
@@ -42,14 +43,14 @@ function UnosOrg({ dohvatiOrganizacije }) {
           <Form.Control type="text" value={ime} onChange={(e) => setIme(e.target.value)} />
         </Form.Group>
 
-        <Form.Group controlId="formBiografija">
-          <Form.Label>Biografija</Form.Label>
-          <Form.Control type="text" value={biografija} onChange={(e) => setBiografija(e.target.value)} />
+        <Form.Group controlId="formOpis">
+          <Form.Label>Opis</Form.Label>
+          <Form.Control type="text" value={opis} onChange={(e) => setOpis(e.target.value)} />
         </Form.Group>
 
-        <Form.Group controlId="formOrganizacija">
-          <Form.Label>Organizacija</Form.Label>
-          <Form.Control type="text" value={organizacija} onChange={(e) => setOrganizacija(e.target.value)} />
+        <Form.Group controlId="formRadionice">
+          <Form.Label>Radionice</Form.Label>
+          <Form.Control type="text" value={radionice} onChange={(e) => setRadionice(e.target.value)} placeholder="Enter radionice, separated by commas" />
         </Form.Group>
 
         <Button variant="primary" type="submit">
@@ -60,4 +61,4 @@ function UnosOrg({ dohvatiOrganizacije }) {
   );
 }
 
-export default UnosPredavaca;
+export default UnosOrg;

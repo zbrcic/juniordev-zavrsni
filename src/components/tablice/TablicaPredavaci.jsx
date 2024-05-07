@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import UrediPredavace from '../unosi i promjene/UrediPredav';
 import BrisiPredavace from '../unosi i promjene/BrisiPred';

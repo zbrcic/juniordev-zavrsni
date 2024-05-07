@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
- import brisiOrganizaciju from '../unosi i promjene/BrisiOrg';
-  import urediOrganizaciju from '../unosi i promjene/UrediOrg';
+ import BrisiOrganizaciju from '../unosi i promjene/BrisiOrg';
+  import UrediOrganizaciju from '../unosi i promjene/UrediOrg';
 
 function TablicaOrganizacije({ organizacije, dohvatiOrganizacije}) {
 
@@ -21,8 +21,8 @@ function TablicaOrganizacije({ organizacije, dohvatiOrganizacije}) {
             <td>{organizacija.ime}</td>
             <td>{organizacija.radionice.join(', ')}</td>
             <td>
-              <urediOrganizaciju organizacija={organizacija} dohvatiOrganizacije={dohvatiOrganizacije} />
-              <brisiOrganizaciju organizacija={organizacija} dohvatiOrganizacije={dohvatiOrganizacije} />
+              <UrediOrganizaciju organizacija={organizacija} dohvatiOrganizacije={dohvatiOrganizacije} />
+              <BrisiOrganizaciju organizacija={organizacija} dohvatiOrganizacije={dohvatiOrganizacije} />
             </td>
           </tr>
         ))}
