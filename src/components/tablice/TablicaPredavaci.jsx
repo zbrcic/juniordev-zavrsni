@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import Table from 'react-bootstrap/Table';
+import UrediPredavace from '../unosi i promjene/UrediPredav';
+import BrisiPredavace from '../unosi i promjene/BrisiPred';
 
-function TablicaPredavaci() {
-  const [predavaci, setPredavaci] = useState([]);
+function TablicaPredavaci({ predavaci, dohvatiPredavace }) {
 
-  useEffect(() => {
-    axios.get('http://localhost:3001/predavaci')
-      .then(response => {
-        setPredavaci(response.data);
-      })
-      .catch(error => {
-        console.error('There was an error!', error);
-      });
-  }, []);
+
+  useEffect(dohvatiPredavace, []);
 
   return (
     <Table striped bordered hover>
@@ -28,6 +21,10 @@ function TablicaPredavaci() {
           <tr key={predavac.id}>
             <td>{predavac.ime}</td>
             <td>{predavac.organizacija}</td>
+           <td>
+             <UrediPredavace predavac={predavac} dohvatiPredavace={dohvatiPredavace} />
+              <BrisiPredavace predavac={predavac} dohvatiPredavace={dohvatiPredavace} />
+           </td> 
           </tr>
         ))}
       </tbody>

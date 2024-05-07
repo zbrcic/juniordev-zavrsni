@@ -30,14 +30,6 @@
       "datum": "2024-01-07",
       "predavac": "predavac_1",
       "opis": "Kratki opis radionice 4"
-    },
-    {
-      "id": "dfdfg",
-      "ime": "dfgdfgd",
-      "datum": "2024-05-30",
-      "predavac": "dfgdfg",
-      "opis": "dfgdfd",
-      "broj_prijava": 0
     }
   ],
   "predavaci": [
@@ -58,32 +50,7 @@
       "ime": "Predavac 3",
       "biografija": "Biografija predavaca 3",
       "organizacija": "organizacija_1"
-    },
-    {
-      "id": "predavac_4",
-      "ime": "mile",
-      "biografija": "sdgsd",
-      "organizacija": "sdgsd"
-    },
-    {
-      "id": "predavac_5",
-      "ime": "mile",
-      "biografija": "fdgsgf",
-      "organizacija": "sdgsdg"
-    },
-    {
-      "id": "predavac_5345345",
-      "ime": "sdgsdfgs",
-      "biografija": "sdgsdgsdhbtjtz",
-      "organizacija": "tzjtz"
-    },
-    {
-      "id": "fdgdfg",
-      "ime": "dfgdfg",
-      "biografija": "dfgdfgdf",
-      "organizacija": "dgdfgdfgf"
     }
-
   ],
   "organizacije": [
     {

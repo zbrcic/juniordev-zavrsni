@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import Table from 'react-bootstrap/Table';
+ import brisiOrganizaciju from '../unosi i promjene/BrisiOrg';
+  import urediOrganizaciju from '../unosi i promjene/UrediOrg';
 
-function TablicaOrganizacije() {
-  const [organizacije, setOrganizacije] = useState([]);
+function TablicaOrganizacije({ organizacije, dohvatiOrganizacije}) {
 
-  useEffect(() => {
-    axios.get('http://localhost:3001/organizacije')
-      .then(response => {
-        setOrganizacije(response.data);
-      })
-      .catch(error => {
-        console.error('There was an error!', error);
-      });
-  }, []);
+  useEffect(dohvatiOrganizacije, []);
 
   return (
     <Table striped bordered hover>
@@ -28,6 +20,10 @@ function TablicaOrganizacije() {
           <tr key={organizacija.id}>
             <td>{organizacija.ime}</td>
             <td>{organizacija.radionice.join(', ')}</td>
+            <td>
+              <urediOrganizaciju organizacija={organizacija} dohvatiOrganizacije={dohvatiOrganizacije} />
+              <brisiOrganizaciju organizacija={organizacija} dohvatiOrganizacije={dohvatiOrganizacije} />
+            </td>
           </tr>
         ))}
       </tbody>

@@ -3,11 +3,12 @@ import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 
-function UnosPredavaca({ dohvatiPredavace }) {
+function UnosOrg({ dohvatiOrganizacije }) {
   const [id, setId] = useState('');
   const [ime, setIme] = useState('');
-  const [biografija, setBiografija] = useState('');
-  const [organizacija, setOrganizacija] = useState('');
+  const [opis, setOpis] = useState('');
+  
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
