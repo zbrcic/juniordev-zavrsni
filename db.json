@@ -2,72 +2,73 @@
   "radionice": [
     {
       "id": "radionica_1",
-      "ime": "Radionica 1",
+      "ime": "React radionica",
       "datum": "01.01.2025",
-      "predavac": "predavac_1",
-      "opis": "Kratki opis radionice 1",
-      "broj_prijava": 6
+      "predavac": "Lorem Ipsumić",
+      "opis": "Uvodni tečaj za korištenje React-a.",
+      "broj_prijava": 0
     },
     {
       "id": "radionica_2",
-      "ime": "Radionica 2",
+      "ime": "Express js tečaj",
       "datum": "01.02.2025",
-      "predavac": "predavac_2",
-      "opis": "Kratki opis radionice 2",
-      "broj_prijava": 2
+      "predavac": "Ipsum loremić",
+      "opis": "Uvodni tečaj za korištenje Express js-a.",
+      "broj_prijava": 0
     },
     {
       "id": "radionica_3",
-      "ime": "Radionica 3",
+      "ime": "PHP radionica",
       "datum": "01.03.2025",
-      "predavac": "predavac_3",
-      "opis": "Kratki opis radionice 3",
-      "broj_prijava": 5
+      "predavac": "Foobar Quux",
+      "opis": "Uvodni tečaj za korištenje PHP-a.",
+      "broj_prijava": 0
     },
     {
       "id": "radionica_4",
-      "ime": "Radionica 4",
+      "ime": ".Net radionica",
       "datum": "2024-01-07",
-      "predavac": "predavac_1",
-      "opis": "Kratki opis radionice 4"
+      "predavac": "Lorem Ipsumić",
+      "opis": "Uvodni tečaj za korištenje .Net-a",
+      "broj_prijava": 0
     }
   ],
   "predavaci": [
     {
       "id": "predavac_1",
-      "ime": "Predavac 1",
-      "biografija": "Biografija predavaca 1",
-      "organizacija": "organizacija_1"
+      "ime": "Lorem Ipsumić",
+      "biografija": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "organizacija": "Digitalna Dalmacija"
     },
     {
       "id": "predavac_2",
-      "ime": "Predavac 2",
-      "biografija": "Biografija predavaca 2",
-      "organizacija": "organizacija_2"
+      "ime": "Ipsum Loremić",
+      "biografija": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "organizacija": "Analogna Dalmacija"
     },
     {
       "id": "predavac_3",
-      "ime": "Predavac 3",
-      "biografija": "Biografija predavaca 3",
-      "organizacija": "organizacija_1"
+      "ime": "Foobar Quux\t",
+      "biografija": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "organizacija": "Digitalna Dalmacija"
     }
   ],
   "organizacije": [
     {
       "id": "organizacija_1",
-      "ime": "Organizacija 1",
-      "opis": "Opis organizacije 1",
+      "ime": "Digitalna Dalmacija",
+      "opis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "radionice": [
-        "radionica_1",
-        "radionica_3"
+        "React radionica",
+        "PHP radionica"
       ]
     },
     {
       "id": "organizacija_2",
-      "ime": "Organizacija 2",
-      "opis": "Opis organizacije 2",
+      "ime": "Analogna Dalmacija",
+      "opis": "Eros donec ac odio tempor orci dapibus. Eget nullam non nisi est. Massa eget egestas purus viverra accumsan.",
       "radionice": [
-        "radionica_2"
+        "Express js tečaj"
       ]
     }
   ],

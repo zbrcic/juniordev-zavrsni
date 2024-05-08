@@ -25,7 +25,7 @@ function UrediOrganizaciju({ organizacija, dohvatiOrganizacije }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.put(`http://localhost:3001/organizacije/${id}`, {
+    axios.patch(`http://localhost:3001/organizacije/${id}`, {
       id,
       ime,
       opis,

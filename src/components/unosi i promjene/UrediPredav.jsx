@@ -25,7 +25,7 @@ function UrediPredavace({ predavac, dohvatiPredavace }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.put(`http://localhost:3001/predavaci/${id}`, {
+    axios.patch(`http://localhost:3001/predavaci/${id}`, {
       id,
       ime,
       biografija,

@@ -27,7 +27,7 @@ function UrediRadionice({ radionica, dohvatiRadionice }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.put(`http://localhost:3001/radionice/${id}`, {
+    axios.patch(`http://localhost:3001/radionice/${id}`, {
       id,
       ime,
       datum,
