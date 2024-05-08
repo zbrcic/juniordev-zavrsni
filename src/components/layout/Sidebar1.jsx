@@ -9,6 +9,7 @@ function Sidebar1() {
   };
 
   return (
+    <div className="sidebar">
     <ListGroup as="ul" activeKey={selectedKey} onSelect={handleSelect}>
       <ListGroup.Item as="li" eventKey="radionice">
         <input type="checkbox" id="radionice" name="radionice" />
@@ -19,6 +20,7 @@ function Sidebar1() {
         <label htmlFor="predavaci">Predavaci</label>
       </ListGroup.Item>
     </ListGroup>
+    </div>
   );
 }
 

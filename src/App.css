@@ -28,3 +28,18 @@
   right: 0;
   padding: 1rem;
 }
+
+.sidebar {
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  left: 0; /* Stay at the left */
+  height: 100%; /* Full-height */
+  width: 20%; /* Set the width of the sidebar */
+  background-color: #f8f9fa; /* Background color */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px; /* Place content 20px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+.main-content {
+  margin-left: 20%; /* Same as the width of the sidebar */
+}

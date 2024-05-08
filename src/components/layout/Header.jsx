@@ -5,7 +5,7 @@ import Predavaci from '../Predavaci';
 import { useContext } from 'react';
 import AdminContext from '../Kontekst';
 import Tabovi from '../layout/Tabovi';
-import Sidebar from './Sidebar1';
+import Sidebar1 from './Sidebar1';
 import logo from '../logo/juniorDev.png'
 
 function Header() {
@@ -26,7 +26,7 @@ function Header() {
         <Tab eventKey="radionice" title="Radionice">
           {/* Ovde mi ide tab radionice */}
           <Radionica />
-          <Sidebar />
+          <Sidebar1 />
         </Tab>
         <Tab eventKey="predavaci" title="Predavaci">
           {/* Ovde mi ide tab radionice */}

@@ -25,7 +25,7 @@ function Radionica() {
         handleClose();
       })
       .catch((error) => {
-        console.error('Error updating data: ', error);
+        console.error('greska!: ', error);
       });
   };
 
@@ -36,7 +36,7 @@ function Radionica() {
         setData(response.data);
       })
       .catch((error) => {
-        console.error('Error fetching data: ', error);
+        console.error('greska!: ', error);
       });
   }, []);
 

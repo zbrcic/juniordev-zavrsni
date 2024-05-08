@@ -10,7 +10,7 @@ function Predavaci() {
         setData(response.data);
       })
       .catch((error) => {
-        console.error('Error fetching data: ', error);
+        console.error('greska!: ', error);
       });
   }, []);
 
