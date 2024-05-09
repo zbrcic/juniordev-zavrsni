@@ -29,17 +29,14 @@
   padding: 1rem;
 }
 
-.sidebar {
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  left: 0; /* Stay at the left */
-  height: 100%; /* Full-height */
-  width: 20%; /* Set the width of the sidebar */
-  background-color: #f8f9fa; /* Background color */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px; /* Place content 20px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+.sidebar1 {
+  position: absolute; /* Position it relative to the viewport */
+  top: 87px; /* Position it under the header. Adjust this value based on the height of your header */
+  left: 0; /* Position it to the left of the webpage */
+  height: calc(100vh - 50px); /* Make it span the entire height of the document, minus the height of the header */
+  border: 1px solid #000; /* Add a border */
+  overflow: auto; /* Add scroll if content overflows */
+  width: 20%; /* Double the width of the sidebar. Adjust this value based on your current width */
+
 }
 
-.main-content {
-  margin-left: 20%; /* Same as the width of the sidebar */
-}

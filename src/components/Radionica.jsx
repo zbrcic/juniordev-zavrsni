@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Prijava from './Prijava';
 import axios from 'axios';
 
-function Radionica() {
+function Radionica({ filters }) {
   const [data, setData] = useState(null);
   const [show, setShow] = useState(false);
   const [odabranaRadionica, setOdabranaRadionica] = useState(null);

@@ -1,27 +1,24 @@
-import React, { useState } from 'react';
-import { ListGroup } from 'react-bootstrap';
 
-function Sidebar1() {
-  const [selectedKey, setSelectedKey] = useState('');
-
-  const handleSelect = (selectedKey) => {
-    setSelectedKey(selectedKey);
-  };
-
+function Sidebar1({ filters, handleFilterChange }) {
   return (
-    <div className="sidebar">
-    <ListGroup as="ul" activeKey={selectedKey} onSelect={handleSelect}>
-      <ListGroup.Item as="li" eventKey="radionice">
-        <input type="checkbox" id="radionice" name="radionice" />
-        <label htmlFor="radionice">Radionice</label>
-      </ListGroup.Item>
-      <ListGroup.Item as="li" eventKey="predavaci">
-        <input type="checkbox" id="predavaci" name="predavaci" />
-        <label htmlFor="predavaci">Predavaci</label>
-      </ListGroup.Item>
-    </ListGroup>
+    <div className="sidebar1">
+      <label>
+        <input type="checkbox" name="react" checked={filters.react} onChange={handleFilterChange} />
+        React
+      </label>
+      <label>
+        <input type="checkbox" name="express" checked={filters.express} onChange={handleFilterChange} />
+        Express
+      </label>
+      <label>
+        <input type="checkbox" name="php" checked={filters.php} onChange={handleFilterChange} />
+        PHP
+      </label>
+      <label>
+        <input type="checkbox" name="net" checked={filters.net} onChange={handleFilterChange} />
+        .NET
+      </label>
     </div>
   );
 }
-
 export default Sidebar1;

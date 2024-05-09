@@ -2,7 +2,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Radionica from '../Radionica';
 import Predavaci from '../Predavaci';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import AdminContext from '../Kontekst';
 import Tabovi from '../layout/Tabovi';
 import Sidebar1 from './Sidebar1';
@@ -10,6 +10,20 @@ import logo from '../logo/juniorDev.png'
 
 function Header() {
   const { uloga } = useContext(AdminContext);
+  const [filters, setFilters] = useState({
+    react: false,
+    express: false,
+    php: false,
+    net: false,
+  });
+
+  const handleFilterChange = (event) => {
+    setFilters({
+      ...filters,
+      [event.target.name]: event.target.checked,
+    });
+  };
+
 
   console.log(uloga);
 
@@ -25,8 +39,8 @@ function Header() {
       >
         <Tab eventKey="radionice" title="Radionice">
           {/* Ovde mi ide tab radionice */}
-          <Radionica />
-          <Sidebar1 />
+          <Radionica filters={filters}/>
+          <Sidebar1 filters={filters} handleFilterChange={handleFilterChange}/>
         </Tab>
         <Tab eventKey="predavaci" title="Predavaci">
           {/* Ovde mi ide tab radionice */}
