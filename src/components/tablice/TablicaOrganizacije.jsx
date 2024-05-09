@@ -8,7 +8,7 @@ function TablicaOrganizacije({ organizacije, dohvatiOrganizacije}) {
   useEffect(dohvatiOrganizacije, []);
 
   return (
-    <Table striped bordered hover>
+    <Table striped bordered hover className="table">
       <thead>
         <tr>
           <th>Ime</th>

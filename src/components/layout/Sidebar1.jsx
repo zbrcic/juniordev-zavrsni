@@ -2,6 +2,7 @@
 function Sidebar1({ filters, handleFilterChange }) {
   return (
     <div className="sidebar1">
+      <h3>Radionice:</h3>
       <label>
         <input type="checkbox" name="react" checked={filters.react} onChange={handleFilterChange} />
         React

@@ -44,7 +44,7 @@ function Radionica({ filters }) {
     <>
       {data ? (
         data.map((radionica, index) => (
-          <div key={index} className="radionica-div">
+          <div key={index} className="pregled-div">
             <h1>{radionica.ime}</h1>
             <p>Datum: {radionica.datum}</p>
             <p>Predavac: {radionica.predavac}</p>

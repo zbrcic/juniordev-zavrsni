@@ -49,7 +49,7 @@ function Tabovi() {
     <Tabs
       defaultActiveKey="profile"
       id="uncontrolled-tab-example"
-      className="mb-3"
+      className="mb-3 custom-tabs"
     >
       <Tab eventKey="radionice" title="Radionice">
         <TablicaRadionice radionice={radionice} dohvatiRadionice={dohvatiRadionice} />

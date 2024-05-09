@@ -18,7 +18,7 @@ function Predavaci() {
     <>
       {data ? (
         data.map((predavac, index) => (
-          <div key={index}>
+          <div key={index} className="pregled-div">
             <h1>{predavac.ime}</h1>
             <p>Biografija: {predavac.biografija}</p>
             <p>Organizacija: {predavac.organizacija}</p>
